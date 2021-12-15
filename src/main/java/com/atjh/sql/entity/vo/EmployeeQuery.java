@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 @Data
 public class EmployeeQuery implements Serializable {
+    private Integer id;
+
     private String name;
 
     private String tell;

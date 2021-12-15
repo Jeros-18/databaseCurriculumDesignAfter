@@ -17,12 +17,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author jahui
- * @since 2021-12-14
+ * @since 2021-12-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="Employee对象", description="员工")
+@ApiModel(value="Employee对象", description="")
 public class Employee implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -39,7 +39,6 @@ public class Employee implements Serializable {
     private Integer shopId;
 
     @TableLogic
-    @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
     private Boolean isDeleted;
 
 

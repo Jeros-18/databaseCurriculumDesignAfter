@@ -12,7 +12,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-import sun.rmi.runtime.Log;
 
 import java.util.List;
 
@@ -84,12 +83,16 @@ public class EmployeeController {
     public R getEmployeePageVo(@PathVariable Long current,
                                @PathVariable Long limit,
                                @RequestBody EmployeeQuery employeeQuery){
+        Integer id = employeeQuery.getId();
         String name = employeeQuery.getName();
         String tell = employeeQuery.getTell();
         String address = employeeQuery.getAddress();
         Integer shopId = employeeQuery.getShopId();
 
         QueryWrapper<Employee> wrapper = new QueryWrapper<>();
+        if (!StringUtils.isEmpty(id)) {
+            wrapper.eq("id",id);
+        }
         if (!StringUtils.isEmpty(name)) {
             wrapper.like("name",name);
         }
@@ -99,8 +102,8 @@ public class EmployeeController {
         if (!StringUtils.isEmpty(address)) {
             wrapper.like("address",address);
         }
-        if (!StringUtils.isEmpty(address)) {
-            wrapper.like("shopId",shopId);
+        if (!StringUtils.isEmpty(shopId)) {
+            wrapper.eq("shopId",shopId);
         }
 
         Page<Employee> page = new Page<>(current, limit);
