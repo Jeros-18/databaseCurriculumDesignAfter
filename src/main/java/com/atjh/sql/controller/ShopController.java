@@ -26,6 +26,7 @@ import java.util.List;
 @Api(description = "车间管理" )
 @RestController
 @RequestMapping("/sql/shop")
+@CrossOrigin
 public class ShopController {
 
     @Autowired

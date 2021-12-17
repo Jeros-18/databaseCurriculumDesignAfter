@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d374b368-ca0e-4bdd-b3b0-0e156d4f0062" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/controller/ShopController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/entity/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/entity/vo/GetShopQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/mapper/ShopMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/mapper/xml/ShopMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/service/ShopService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/service/impl/ShopServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/controller/FactoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/controller/StoreadminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/entity/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/entity/Storeadmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/entity/vo/FactoryQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/mapper/FactoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/mapper/StoreadminMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/mapper/xml/FactoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/mapper/xml/StoreadminMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/service/FactoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/service/StoreadminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/service/impl/FactoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/service/impl/StoreadminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atjh/sql/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atjh/sql/controller/ShopController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/atjh/sql/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/atjh/sql/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atjh/sql/controller/ShopController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atjh/sql/controller/ShopController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/atjh/sql/CodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/atjh/sql/CodeGenerator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +165,7 @@
       <workItem from="1639554162750" duration="6410000" />
       <workItem from="1639562766476" duration="1843000" />
       <workItem from="1639622271781" duration="8915000" />
-      <workItem from="1639744838519" duration="7344000" />
+      <workItem from="1639744838519" duration="8771000" />
     </task>
     <servers />
   </component>
@@ -188,38 +196,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1639747684059" />
-    <state width="1493" height="243" key="GridCell.Tab.0.bottom" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.0.bottom" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
-    <state width="1493" height="243" key="GridCell.Tab.0.center" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
+    <state width="1493" height="521" key="GridCell.Tab.0.center" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
-    <state width="1493" height="243" key="GridCell.Tab.0.left" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
+    <state width="1493" height="521" key="GridCell.Tab.0.left" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
-    <state width="1493" height="243" key="GridCell.Tab.0.right" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
+    <state width="1493" height="521" key="GridCell.Tab.0.right" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
-    <state width="1493" height="243" key="GridCell.Tab.1.bottom" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
+    <state width="1493" height="521" key="GridCell.Tab.1.bottom" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
-    <state width="1493" height="243" key="GridCell.Tab.1.center" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
+    <state width="1493" height="521" key="GridCell.Tab.1.center" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
-    <state width="1493" height="243" key="GridCell.Tab.1.left" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
+    <state width="1493" height="521" key="GridCell.Tab.1.left" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
-    <state width="1493" height="243" key="GridCell.Tab.1.right" timestamp="1639755073640">
+    <state width="1493" height="521" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
+    <state width="1493" height="521" key="GridCell.Tab.1.right" timestamp="1639756398382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="243" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1639755073640" />
+    <state width="1493" height="521" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1639756398382" />
     <state width="1493" height="277" key="GridCell.Tab.2.bottom" timestamp="1639748435552">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
