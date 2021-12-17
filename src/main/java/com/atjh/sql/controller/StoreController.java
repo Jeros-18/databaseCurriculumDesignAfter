@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -28,6 +29,7 @@ import java.util.List;
 @Api(description = "仓库管理")
 @RestController
 @RequestMapping("/sql/store")
+@CrossOrigin
 public class StoreController {
 
     @Autowired
@@ -38,6 +40,13 @@ public class StoreController {
     public R getAllStore(){
         List<Store> list = storeService.list(null);
         return R.ok().data("storeList",list);
+    }
+
+    @ApiOperation(value = "根据Id查询仓库")
+    @GetMapping("getStore/{id}")
+    public R getStoreById(@PathVariable String id){
+        Store store = storeService.getById(id);
+        return R.ok().data("store",store);
     }
 
     @ApiOperation(value = "根据id删除仓库")
@@ -80,11 +89,16 @@ public class StoreController {
     @PostMapping("getStore/{current}/{limit}")
     public R getStorePageVo(@PathVariable Long current,
                                @PathVariable Long limit,
-                               @RequestBody getStoreQuery getStoreQuery){
+                               @RequestBody getStoreQuery getStoreQuery,
+                            HttpServletRequest request){
         Integer id = getStoreQuery.getId();
         Float size = getStoreQuery.getSize();
         Integer storeAdmin = getStoreQuery.getStoreAdmin();
         String note = getStoreQuery.getNote();
+
+        String sizeMin = request.getParameter("sizeMin");
+        String sizeMax = request.getParameter("sizeMax");
+        System.out.println("sizeMax---------------------------------------------------------"+sizeMax);
 
         /**
          * 原符号 < <= > >= <>
@@ -94,11 +108,11 @@ public class StoreController {
         if (!StringUtils.isEmpty(id)) {
             wrapper.eq("id",id);
         }
-        if (!StringUtils.isEmpty(size)) {
-            wrapper.le("sizeMax",size);
+        if (!StringUtils.isEmpty(sizeMax)) {
+            wrapper.le("size",sizeMax);
         }
-        if (!StringUtils.isEmpty(size)) {
-            wrapper.ge("sizeMin",size);
+        if (!StringUtils.isEmpty(sizeMin)) {
+            wrapper.ge("size",sizeMin);
         }
         if (!StringUtils.isEmpty(storeAdmin)) { //查不出来
             wrapper.eq("storeAdmin",storeAdmin);
