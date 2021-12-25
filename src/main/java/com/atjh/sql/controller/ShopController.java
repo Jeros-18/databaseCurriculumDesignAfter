@@ -83,7 +83,7 @@ public class ShopController {
     }
 
     @ApiOperation(value = "带条件分页查询车间列表")
-    @PostMapping("getStore/{current}/{limit}")
+    @PostMapping("getShop/{current}/{limit}")
     public R getStorePageVo(@PathVariable Long current,
                             @PathVariable Long limit,
                             @RequestBody GetShopQuery shopQuery){

@@ -41,8 +41,8 @@ public class FactoryController {
     @ApiOperation(value = "根据id查询工厂")
     @GetMapping("getFactory/{id}")
     public R getFactoryById(@PathVariable Integer id){
-        Factory Factory = factoryService.getById(id);
-        return R.ok().data("Factory",Factory);
+        Factory factory = factoryService.getById(id);
+        return R.ok().data("factory",factory);
     }
 
     @ApiOperation(value = "删除工厂")

@@ -40,14 +40,14 @@ public class StoreadminController {
     @GetMapping
     public R getAllStoreadmin(){
         List<Storeadmin> list = storeadminService.list(null);
-        return R.ok().data("storeadminList",list);
+        return R.ok().data("storeAdmin",list);
 }
 
     @ApiOperation(value = "根据id查询仓库管理员")
-    @GetMapping("getStoreadmin/{id}")
+    @GetMapping("getStoreAdmin/{id}")
     public R getStoreadminById(@PathVariable Integer id){
         Storeadmin storeadmin = storeadminService.getById(id);
-        return R.ok().data("storeadmin",storeadmin);
+        return R.ok().data("storeAdmin",storeadmin);
     }
 
     @ApiOperation(value = "删除仓库管理员")
@@ -88,7 +88,7 @@ public class StoreadminController {
 
     // bug
     @ApiOperation(value = "带条件分页查询仓库管理员列表")
-    @PostMapping("getEmployee/{current}/{limit}")
+    @PostMapping("getStoreAdmin/{current}/{limit}")
     public R getEmployeePageVo(@PathVariable Long current,
                                @PathVariable Long limit,
                                @RequestBody StoreadminQuery storeadminQuery ){
