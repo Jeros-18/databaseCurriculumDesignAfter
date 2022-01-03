@@ -115,7 +115,7 @@ public class StoreController {
             wrapper.ge("size",sizeMin);
         }
         if (!StringUtils.isEmpty(storeAdmin)) { //查不出来
-            wrapper.eq("storeAdmin",storeAdmin);
+            wrapper.eq("store_admin",storeAdmin);
         }
         if (!StringUtils.isEmpty(note)) {
             wrapper.like("note",note);

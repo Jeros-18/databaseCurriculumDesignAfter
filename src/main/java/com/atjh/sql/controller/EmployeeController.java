@@ -97,13 +97,13 @@ public class EmployeeController {
             wrapper.like("name",name);
         }
         if (!StringUtils.isEmpty(tell)) {
-            wrapper.like("tell",tell);
+            wrapper.eq("tell",tell);
         }
         if (!StringUtils.isEmpty(address)) {
             wrapper.like("address",address);
         }
         if (!StringUtils.isEmpty(shopId)) {
-            wrapper.eq("shopId",shopId);
+            wrapper.eq("shop_id",shopId);
         }
 
         Page<Employee> page = new Page<>(current, limit);

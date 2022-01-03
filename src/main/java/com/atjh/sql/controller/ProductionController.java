@@ -93,17 +93,17 @@ public class ProductionController {
 
 
         QueryWrapper<Production> wrapper = new QueryWrapper<>();
-        if (!StringUtils.isEmpty(name)) {
+        if (!StringUtils.isEmpty(id)) {
             wrapper.eq("id",id);
         }
         if (!StringUtils.isEmpty(name)) {
             wrapper.like("name",name);
         }
         if (!StringUtils.isEmpty(shopId)) {
-            wrapper.eq("shopId",shopId);
+            wrapper.eq("shop_id",shopId);
         }
         if (!StringUtils.isEmpty(storeId)) {
-            wrapper.eq("storeId",storeId);
+            wrapper.eq("store_id",storeId);
         }
 
         Page<Production> page = new Page<>(current, limit);

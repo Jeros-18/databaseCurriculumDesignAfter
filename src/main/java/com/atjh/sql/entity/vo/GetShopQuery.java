@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 @Data
 public class GetShopQuery implements Serializable {
+    private String id;
     private String address;
 
     private Integer shopAdmin;

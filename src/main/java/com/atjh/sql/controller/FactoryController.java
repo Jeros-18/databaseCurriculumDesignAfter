@@ -91,17 +91,20 @@ public class FactoryController {
         String faName = factoryQuery.getFaName();
         String dirName = factoryQuery.getDirName();
         String faAddress = factoryQuery.getFaAddress();
-
+        String id = factoryQuery.getId();
 
         QueryWrapper<Factory> wrapper = new QueryWrapper<>();
+        if (!StringUtils.isEmpty(id)) {
+            wrapper.like("id",id);
+        }
         if (!StringUtils.isEmpty(faName)) {
-            wrapper.like("faName",faName);
+            wrapper.like("fa_name",faName);
         }
         if (!StringUtils.isEmpty(dirName)) {
-            wrapper.like("dirName",dirName);
+            wrapper.like("dir_name",dirName);
         }
         if (!StringUtils.isEmpty(faAddress)) {
-            wrapper.like("faAddress",faAddress);
+            wrapper.like("fa_address",faAddress);
         }
 
         Page<Factory> page = new Page<>(current, limit);

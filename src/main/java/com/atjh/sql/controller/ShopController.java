@@ -91,14 +91,18 @@ public class ShopController {
         String address = shopQuery.getAddress();
         Integer shopAdmin = shopQuery.getShopAdmin();
         String note = shopQuery.getNote();
+        String id = shopQuery.getId();
 
 
         QueryWrapper<Shop> wrapper = new QueryWrapper<>();
+        if (!StringUtils.isEmpty(id)) {
+            wrapper.like("id",id);
+        }
         if (!StringUtils.isEmpty(address)) {
             wrapper.like("address",address);
         }
         if (!StringUtils.isEmpty(shopAdmin)) {
-            wrapper.like("shopAdmin",shopAdmin);
+            wrapper.like("shop_admin",shopAdmin);
         }
         if (!StringUtils.isEmpty(note)) {
             wrapper.like("note",note);

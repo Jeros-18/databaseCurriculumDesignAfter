@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 @Data
 public class FactoryQuery implements Serializable {
+    private String id;
     private String faName;
 
     private String dirName;

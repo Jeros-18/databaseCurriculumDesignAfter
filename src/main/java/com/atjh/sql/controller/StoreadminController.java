@@ -104,7 +104,7 @@ public class StoreadminController {
             wrapper.like("tell",tell);
         }
         if (!StringUtils.isEmpty(storeId)) {
-            wrapper.eq("storeId",storeId);
+            wrapper.eq("store_id",storeId);
         }
 
 
